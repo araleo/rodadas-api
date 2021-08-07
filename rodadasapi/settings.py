@@ -16,7 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com']
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 INSTALLED_APPS = [
