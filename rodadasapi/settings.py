@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('API_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com/']
+ALLOWED_HOSTS = ['rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
