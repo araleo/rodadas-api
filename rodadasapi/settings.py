@@ -14,7 +14,11 @@ SECRET_KEY = os.environ.get('API_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = [
+    'rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com',
+    'rodadasamericalatina.com',
+    'api.rodadasamericalatina.com',
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
