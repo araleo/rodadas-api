@@ -9,6 +9,7 @@ media
 .vscode/*
 .history
 .env
+local_settings.py
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

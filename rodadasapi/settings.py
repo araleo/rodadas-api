@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 
 
-# Loading variables into env 
+# Loading variables into env
 load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('API_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'rodadasapi.eba-xxnumxer.us-east-2.elasticbeanstalk.com',
@@ -129,3 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

@@ -19,14 +19,19 @@ class ProximaRodadaViewSet(viewsets.ModelViewSet):
     serializer_class = RodadaSerializer
     permission_classes = [permissions.AllowAny]
 
-    def list(self, request):
+    def list(self, _):
         queryset = Rodada.objects.filter(
             date__gte=timezone.datetime.now()
         ).order_by(
             "date"
         ).first()
+        
+        if not queryset:
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+
         serializer = RodadaSerializer(queryset)
         return Response(serializer.data, status=status.HTTP_200_OK)
+        
 
 
 class UltimasRodadasViewSet(viewsets.ModelViewSet):
@@ -34,7 +39,7 @@ class UltimasRodadasViewSet(viewsets.ModelViewSet):
     serializer_class = RodadaSerializer
     permission_classes = [permissions.AllowAny]
 
-    def list(self, request):
+    def list(self, _):
         queryset = Rodada.objects.filter(
             date__lt=timezone.datetime.now()
         ).filter(
