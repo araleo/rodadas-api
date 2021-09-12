@@ -10,6 +10,7 @@ media
 .history
 .env
 local_settings.py
+/static/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
